@@ -9,26 +9,24 @@ body {
 }
 #main-div {
   margin-top: 7vh;
-  width: 100%;
-  max-width: 420px;
-  background: #fff;
-  box-shadow: 0 8px 32px rgba(37, 99, 235, 0.1), 0 1.5px 8px rgba(0, 0, 0, 0.04);
-  border-radius: 18px;
+  width: 90%;
+  max-width: 500px;
+  background: linear-gradient(90deg, #2563eb 60%, #60a5fa 100%);
+  box-shadow: 0 8px 32px #2563eb22, 0 1.5px 8px #0001;
+  border-radius: 22px;
   overflow: hidden;
   transition: box-shadow 0.2s;
 }
 #main-div:hover {
-  box-shadow: 0 12px 40px rgba(37, 99, 235, 0.16),
-    0 2px 12px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 12px 40px rgba(37, 99, 235, 0.16);
 }
 #header {
   display: flex;
   align-items: center;
-  background: linear-gradient(90deg, #2563eb 60%, #60a5fa 100%);
-  border-radius: 18px 18px 0 0;
-  width: 89%;
-  justify-content: space-between;
-  padding: 22px 24px 16px 24px;
+  border-radius: 22px 22px 0 0;
+  width: 97.5%;
+  justify-content: space-evenly;
+  padding: 30px 5px 5px 5px;
   box-shadow: 0 2px 8px rgba(37, 99, 235, 0.06);
 }
 #input {
@@ -36,7 +34,7 @@ body {
   border: none;
   width: 100%;
   outline: none;
-  padding: 10px 14px;
+  padding: 8px 12px;
   font-size: 1.08rem;
   background: #f1f5f9;
   color: #222;
@@ -50,28 +48,26 @@ body {
 #header i img {
   height: 22px;
   filter: invert(1) brightness(2);
-  opacity: 0.85;
+  opacity: 0.95;
   transition: opacity 0.2s, transform 0.2s;
 }
-#header i img:hover {
+#header #plus-icon:hover {
   opacity: 1;
-  transform: scale(1.12);
+  transform: scale(1.15);
 }
 #plus-icon {
   cursor: pointer;
-  padding: 10px;
+  padding: 7px;
   border-radius: 50%;
-  background: #fff2;
-  transition: background 0.2s, box-shadow 0.2s;
+  background: #2563eb;
+  transition: 0.2s, box-shadow 0.2s;
   box-shadow: 0 1px 4px #2563eb22;
 }
 #plus-icon:hover {
   background: #1e40af;
   box-shadow: 0 2px 8px #2563eb44;
 }
-#tick-icon {
-  padding-right: 12px;
-}
+
 #left-part-of-header {
   display: flex;
   align-items: center;
@@ -82,20 +78,22 @@ body {
 
 /* task section  */
 .tasks-div {
-  background: #f8fafc;
+  background: #f4f8ff;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 48px;
+  min-height: 45px;
+  width: 80%;
   padding: 0 20px;
-  margin: 10px 0;
+  margin: 8px 0;
   border-radius: 8px;
-  box-shadow: 0 1.5px 6px rgba(37, 99, 235, 0.04);
+  box-shadow: 0 2px 8px #2563eb11;
+  border: 1px solid #e0e7ef;
   transition: background 0.2s, box-shadow 0.2s;
 }
 .tasks-div:hover {
   background: #e0e7ef;
-  box-shadow: 0 3px 12px #2563eb22;
+  box-shadow: 0 4px 16px #2563eb22;
 }
 .tasks-div i img {
   height: 20px;
@@ -121,21 +119,63 @@ body {
   text-decoration: line-through;
   color: #94a3b8;
 }
-.footer-div {
-  background: linear-gradient(90deg, #2563eb 60%, #60a5fa 100%);
-  border-radius: 0 0 18px 18px;
-  overflow: hidden;
-  padding: 16px 24px;
-  color: #fff;
-  font-weight: 600;
-  letter-spacing: 0.7px;
-  font-size: 1.08rem;
-  box-shadow: 0 -2px 8px rgba(37, 99, 235, 0.04);
-  text-align: left;
+/*task container*/
+#task-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100px;
+  max-height: 215px;
+  overflow-y: auto;
+  margin-bottom: 0;
+  padding-right: 2px;
 }
+#task-container::-webkit-scrollbar {
+  display: none;
+}
+/*complete task container*/
+.footer-div {
+  padding: 0px 24px;
+  font-size: 1.08rem;
+  text-align: left;
+  min-height: 100px;
+  max-height: 215px;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-div::-webkit-scrollbar {
+  display: none;
+}
+.complete-task-text-div {
+  padding-left: 5%;
+  background: linear-gradient(90deg, #2563eb 60%, #60a5fa 100%);
+}
+
 #complete-task-text {
-  margin: 0;
-  padding-left: 0;
-  font-size: 1.04rem;
-  letter-spacing: 0.2px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.footer-div .tasks-div {
+  width: 90%;
+}
+
+@media (max-width: 600px) {
+  #task-container {
+    max-height: 120px;
+  }
+  .footer-div {
+    max-height: 100px;
+  }
+  #main-div {
+    border-radius: 12px;
+  }
+  #header,
+  .footer-div {
+    border-radius: 12px 12px 0 0;
+  }
 }
