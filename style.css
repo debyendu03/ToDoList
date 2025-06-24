@@ -1,0 +1,141 @@
+body {
+  background: linear-gradient(135deg, #e0e7ff 0%, #f4f6fb 100%);
+  min-height: 100vh;
+  font-family: "Segoe UI", Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0;
+}
+#main-div {
+  margin-top: 7vh;
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  box-shadow: 0 8px 32px rgba(37, 99, 235, 0.1), 0 1.5px 8px rgba(0, 0, 0, 0.04);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+#main-div:hover {
+  box-shadow: 0 12px 40px rgba(37, 99, 235, 0.16),
+    0 2px 12px rgba(0, 0, 0, 0.06);
+}
+#header {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, #2563eb 60%, #60a5fa 100%);
+  border-radius: 18px 18px 0 0;
+  width: 100%;
+  justify-content: space-between;
+  padding: 22px 24px 16px 24px;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.06);
+}
+#input {
+  border-radius: 8px;
+  border: none;
+  width: 100%;
+  outline: none;
+  padding: 10px 14px;
+  font-size: 1.08rem;
+  background: #f1f5f9;
+  color: #222;
+  margin-left: 12px;
+  box-shadow: 0 1px 4px rgba(37, 99, 235, 0.04);
+  transition: box-shadow 0.2s;
+}
+#input:focus {
+  box-shadow: 0 2px 8px #60a5fa44;
+}
+#header i img {
+  height: 22px;
+  filter: invert(1) brightness(2);
+  opacity: 0.85;
+  transition: opacity 0.2s, transform 0.2s;
+}
+#header i img:hover {
+  opacity: 1;
+  transform: scale(1.12);
+}
+#plus-icon {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  background: #fff2;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px #2563eb22;
+}
+#plus-icon:hover {
+  background: #1e40af;
+  box-shadow: 0 2px 8px #2563eb44;
+}
+#tick-icon {
+  padding-right: 12px;
+}
+#left-part-of-header {
+  display: flex;
+  align-items: center;
+  width: 80%;
+}
+
+/* header section end */
+
+/* task section  */
+.tasks-div {
+  background: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 48px;
+  padding: 0 20px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 1.5px 6px rgba(37, 99, 235, 0.04);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.tasks-div:hover {
+  background: #e0e7ef;
+  box-shadow: 0 3px 12px #2563eb22;
+}
+.tasks-div i img {
+  height: 20px;
+  padding-right: 8px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.tasks-div i img:hover {
+  opacity: 1;
+  transform: scale(1.13);
+}
+.task-text {
+  flex: 1;
+  font-size: 1.08rem;
+  color: #222;
+  margin-left: 10px;
+  letter-spacing: 0.1px;
+  transition: color 0.2s;
+}
+.after-complete-task-text,
+.footer-div .tasks-div .task-text {
+  text-decoration: line-through;
+  color: #94a3b8;
+}
+.footer-div {
+  background: linear-gradient(90deg, #2563eb 60%, #60a5fa 100%);
+  border-radius: 0 0 18px 18px;
+  overflow: hidden;
+  padding: 16px 24px;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.7px;
+  font-size: 1.08rem;
+  box-shadow: 0 -2px 8px rgba(37, 99, 235, 0.04);
+  text-align: left;
+}
+#complete-task-text {
+  margin: 0;
+  padding-left: 0;
+  font-size: 1.04rem;
+  letter-spacing: 0.2px;
+}
