@@ -29,6 +29,15 @@ body {
   padding: 30px 5px 5px 5px;
   box-shadow: 0 2px 8px rgba(37, 99, 235, 0.06);
 }
+#task-container .checkmark-icon {
+  display: none;
+}
+.footer-div .circle-icon {
+  display: none;
+}
+.footer-div .edit-icon {
+  display: none;
+}
 #input {
   border-radius: 8px;
   border: none;
