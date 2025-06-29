@@ -104,6 +104,16 @@ body {
   background: #e0e7ef;
   box-shadow: 0 4px 16px #2563eb22;
 }
+.edited-task-text {
+  border: none;
+  outline: none;
+  background-color: #f4f8ff;
+  font-size: 1.08rem;
+}
+.tasks-div:hover .edited-task-text {
+  background-color: #e0e7ef;
+}
+
 .tasks-div i img {
   height: 20px;
   padding-right: 8px;
